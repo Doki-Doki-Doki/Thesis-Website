@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body{
+    min-height: 100vh;
     font-family: 'Kanit', sans-serif;
 }
 
@@ -61,10 +62,10 @@ h4{
         @apply bg-fgreen 
     }
     .banner__wrapper{
-        @apply grid grid-cols-2 gap-[3rem] py-[5rem] mt-[5rem]
+        @apply grid grid-cols-2 gap-[3rem] py-[5rem] mt-[5rem] justify-center items-center
     }
     .banner__img{
-        @apply flex object-contain bg-fgreen w-[35rem] items-center justify-center
+        @apply flex object-contain bg-fgreen w-[35rem] mx-auto
     }
     .banner__content{
         @apply flex flex-col text-white
@@ -177,7 +178,7 @@ h4{
         @apply flex justify-center gap-[5rem] py-[3rem] mx-auto 
     }
     .abt-members__items img{
-        @apply w-[25rem] h-[25rem] object-cover
+        @apply w-[25rem] h-[25rem] object-cover duration-300
     }
     .abt-members__items img:hover{
         @apply transition-transform transform scale-[1.05] duration-300
@@ -236,12 +237,12 @@ h4{
 
     /* -----LOGIN PAGE----- */
     .login{
+        max-height: 100vh;
         @apply bg-black text-[white] overflow-hidden
     }
     .login__wrapper{
-        width: 100%;
         @apply flex flex-row items-center 
-        mt-[1rem]
+        mt-[1rem] mx-auto justify-between
     }
     .login__title{
         @apply px-[5rem] pt-[8rem] py-[6rem] flex flex-col justify-center 
