@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.btn{
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border: 1px solid transparent;
+    font-weight: bold;
+    border-radius: 3rem;
+}
+.btn.bg--green{
+    @apply bg-brgreen text-white border-black rounded-full
+}
+h1{
+    font-size: 80px;
+}
+h2{
+    font-size: 33px;
+}
+h3{
+    font-size: 24px;
+}
+h4{
+    font-size: 16px;
+}
+
+@layer components{
+    /* HEADER */
+    .header{
+        @apply fixed bg-brgreen text-white w-[100%] shadow-2xl
+    }
+    .header .container{
+        @apply p-[1rem]
+    }
+
+    .header__wrapper{
+        @apply flex py-[0.5rem] px-[2rem] justify-between items-center
+    }
+    .header__menu{
+        @apply flex gap-[2.5rem]
+    }
+
+    /* BANNER */
+    .banner{
+        @apply bg-fgreen 
+    }
+    .banner__wrapper{
+        @apply grid grid-cols-2 gap-[3rem] py-[5rem] mt-[5rem]
+    }
+    .banner__img{
+        @apply flex object-contain bg-fgreen w-[35rem] items-center justify-center
+    }
+    .banner__content{
+        @apply flex flex-col text-white
+    }
+    .banner__content h2{
+        @apply text-justify 
+    }
+    .banner__content h4{
+        @apply pr-[8rem] text-justify
+    }
+
+    /* INFORMATION */
+    .info{
+        @apply bg-emerald
+    }
+    .info__wrapper{
+        @apply px-[10rem] py-[4rem] text-white
+    }
+    .info__wrapper p{
+        @apply text-justify
+    }
+
+    /* IMAGES */
+    .images{
+        @apply bg-pgreen text-white
+    }
+    .images__wrapper{
+        @apply flex flex-col gap-[5rem] py-[3rem] 
+    }
+    .images__title{
+        @apply text-center
+    }
+    .images__content{
+        @apply flex flex-col gap-[5rem]
+    }
+    .images__items{
+        @apply grid grid-cols-2 gap-[6rem]
+    }
+    .image__items__side h4{
+        @apply text-center pt-[1rem]
+    }
+
+    /* CONTACTS */
+    .contacts{
+        @apply bg-dsgreen text-white
+    }
+    .contacts__wrapper{
+        @apply flex flex-col items-center gap-[2rem] py-[1.5rem]
+    }
+    .contacts__wrapper h4{
+        @apply text-[1.5rem]
+    }
+
+    /* FOOTER */
+    .footer{
+        @apply bg-brgreen
+    }
+    .footer__wrapper{
+        @apply flex justify-center text-[2rem] text-white gap-[2rem]
+    }
+
+    /* -----ABOUT----- */
+    /* ABT-BANNER */
+    .abt-banner{
+        @apply bg-dsgreen text-white text-center 
+    }
+    .abt-banner__wrapper{
+        @apply py-[2.5rem] mt-[4rem]
+    }
+
+    /* ABT-INFO */
+    .abt-info{
+        @apply bg-pgreen text-white
+    }
+    .abt-info__wrapper{
+        @apply py-[4rem] max-w-[30rem] text-center mx-auto
+    }
+
+    /* ABT-HIGHLIGHT */
+    .abt-highlight{
+        @apply bg-emerald text-white
+    }
+    .abt-highlight__wrapper{
+        @apply py-[4rem] flex flex-col gap-[2rem]
+    }
+    .abt-highlight__wrapper img{
+        @apply w-[45rem] h-[25rem] mx-auto object-cover
+    }
+    .abt-highlight__wrapper p{
+        @apply max-w-[50rem] mx-auto
+    }
+
+    /*ABT-MEMBERS*/
+    .abt-members{
+        @apply text-white
+    }
+    .abt-members__wrapper{
+        @apply mx-auto
+    }
+    .abt-members__items{
+        @apply flex justify-center gap-[5rem] py-[3rem] mx-auto 
+    }
+    .abt-members__items img{
+        @apply w-[25rem] h-[25rem] object-cover
+    }
+    .abt-members__items:nth-child(odd){
+        @apply bg-pgreen 
+    }
+    .abt-members__items:nth-child(even){
+        @apply bg-emerald flex-row-reverse
+    }
+    .abt-members__items__text{
+        @apply max-w-[40rem] flex flex-col justify-center gap-[3rem]
+    }
+
+
+    /* -----CONTACTS PAGE----- */
+    /* Content */
+
+    .contact-content{
+        @apply bg-fgreen text-white
+    }
+    .contact-content__wrapper{
+        @apply grid grid-cols-2 py-[2rem] px-[5rem] h-[80vh] mt-[5rem] items-center
+    }
+    .contact__left{
+        @apply flex flex-col gap-[0.8rem]
+    }
+    .contact__name{
+        @apply flex flex-col gap-[0.5rem]
+    }
+    .contact__gmail{
+        @apply flex flex-col gap-[0.5rem]
+    }
+    .contact__message{
+        @apply flex flex-col gap-[0.5rem]
+    }
+    input[type=text] {
+        @apply p-[0.5rem]
+    }
+    #namebox{
+        @apply w-[30rem] border-[3px]
+    }
+    #mailbox{
+        @apply w-[30rem] border-[3px]
+    }
+    #msgbox{
+        @apply w-[30rem] h-[10rem] border-[3px]
+    }
+    .contact__right{
+        line-height: 5rem;
+        @apply text-gray-900 
+    }
+    .contact__right span{
+        @apply absolute w-[10rem] h-[10rem]
+    }
+
+    /* -----LOGIN PAGE----- */
+    .login{
+        @apply bg-black text-[white] overflow-hidden
+    }
+    .login__wrapper{
+        width: 100%;
+        @apply flex flex-row items-center 
+        mt-[1rem]
+    }
+    .login__title{
+        @apply px-[5rem] pt-[8rem] py-[6rem] flex flex-col justify-center 
+    }
+    #loginForm{
+        @apply flex flex-col self-center text-white
+        px-[5rem] pt-[8rem] py-[6rem]
+    }
+    #username{
+        @apply w-[25rem] mb-[1rem] text-black
+    }
+    #password{
+        @apply text-black mb-[2rem]
+    }
+
+
+
+
+
+    /* -----HOME PAGE----- */
+    .status{
+        @apply bg-slate-900 bg-fixed bg-center bg-cover;
+    }
+    .status__wrapper{
+        @apply mt-[5rem] py-[2rem]
+    }
+    .status__top{
+        @apply flex gap-[12rem] justify-center py-[2rem]
+    }
+    .status__items{
+        @apply flex flex-col items-center text-white bg-gray-500 py-[0.5rem] pb-[1rem] px-[4rem] rounded-lg
+    }
+    .status__location{
+        @apply flex flex-col gap-[2rem] items-center py-[2rem]
+    }
+    .status__location img{
+        @apply w-[50rem] 
+    }
+}   

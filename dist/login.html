@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="output.css">
+        <script src="https://kit.fontawesome.com/82876e7150.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="branding">
+                </div>
+                <div class="header__menu">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="login">
+        <div class="container">
+            <div class="login__wrapper">
+                <div class="login__title">
+                    <h1>TR.A.L.I.C.</h1>
+                    <h3>TRASH AND LEAF INTELLIGENT COLLECTOR</h3>
+                </div>
+                <div class="login__form">
+                    <form id="loginForm">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username"></input>
+                        <label for="password">Password:</label>
+                        <input type="text" id="password" name="password"></input>
+                        <input type="button" value="Submit" onclick="checkWords()"
+                        class="bg-fgreen py-2 rounded w-[10rem] text-center">
+                    </form>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function checkWords(){
+            var word1 = document.getElementById("username").value.toLowerCase();
+            var word2 = document.getElementById("password").value.toLowerCase();
+
+            if (word1 === "whiteknight123" && word2 === "bunnygirl1234") {
+                window.location.href = "home.html";
+            } else {
+                alert("Incorrect credentials. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
