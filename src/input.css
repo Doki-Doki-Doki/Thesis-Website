@@ -17,6 +17,9 @@
 .btn.bg--green{
     @apply bg-brgreen text-white border-black rounded-full
 }
+.btn.bg--green:hover{
+    @apply bg-emerald
+}
 h1{
     font-size: 80px;
 }
@@ -33,7 +36,7 @@ h4{
 @layer components{
     /* HEADER */
     .header{
-        @apply fixed bg-brgreen text-white w-[100%] shadow-2xl
+        @apply fixed bg-brgreen text-white w-[100%] shadow-2xl z-[999]
     }
     .header .container{
         @apply p-[1rem]
@@ -44,6 +47,9 @@ h4{
     }
     .header__menu{
         @apply flex gap-[2.5rem]
+    }
+    .header__menu a:hover{
+        @apply text-yellow-400
     }
 
     /* BANNER */
@@ -96,6 +102,12 @@ h4{
     .image__items__side h4{
         @apply text-center pt-[1rem]
     }
+    .image__items__side img{
+        @apply duration-300 z-[-1]
+    }
+    .image__items__side img:hover{
+        @apply transition-transform transform scale-[1.05] duration-300
+    }
 
     /* CONTACTS */
     .contacts{
@@ -114,6 +126,9 @@ h4{
     }
     .footer__wrapper{
         @apply flex justify-center text-[2rem] text-white gap-[2rem]
+    }
+    .footer__wrapper a:hover{
+        @apply text-yellow-400
     }
 
     /* -----ABOUT----- */
@@ -236,9 +251,6 @@ h4{
     }
 
 
-
-
-
     /* -----HOME PAGE----- */
     .status{
         @apply bg-slate-900 bg-fixed bg-center bg-cover;
@@ -253,9 +265,19 @@ h4{
         @apply flex flex-col items-center text-white bg-gray-500 py-[0.5rem] pb-[1rem] px-[4rem] rounded-lg
     }
     .status__location{
-        @apply flex flex-col gap-[2rem] items-center py-[2rem]
+        @apply flex flex-col gap-[2rem] items-center py-[2rem] text-white
     }
     .status__location img{
         @apply w-[50rem] 
     }
+
+    /* ---BUTTON--- */
+    .button{
+        @apply bg-fgreen py-2 rounded w-[10rem] text-center
+    }
+    .button:hover{
+        @apply bg-emerald
+    }
 }   
+
+
